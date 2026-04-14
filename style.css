@@ -207,6 +207,7 @@ nav.scrolled .nav-logo {
 nav.scrolled .nav-links a {
   color: var(--text-secondary);
 }
+nav.scrolled .nav-links a:hover,
 .nav-links a:hover {
   color: var(--accent-cta);
 }
