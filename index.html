@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="JAXE TECH, agence digitale à Lomé au Togo. Création de sites web, applications performantes et solutions digitales sur mesure pour booster votre activité. Devis gratuit.">
+    <meta name="keywords" content="agence digitale Togo, création site web Lomé, application mobile Togo, SEO Togo, transformation digitale Afrique, JAXE TECH">
+    <meta name="author" content="JAXE TECH">
+    <title>JAXE TECH | Agence digitale au Togo – Sites web & applications</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Page loader -->
+<div id="page-loader">
+    <div class="loader-inner">
+        <div class="loader-logo">JAXE TECH</div>
+        <div class="loader-line"></div>
+    </div>
+</div>
+
+<!-- Mobile menu -->
+<div class="mobile-nav" id="mobileNav">
+    <button class="mobile-close" id="mobileClose"><i class="fa fa-times"></i></button>
+    <a href="#hero" onclick="closeMobileNav()">Accueil</a>
+    <a href="#about" onclick="closeMobileNav()">À propos</a>
+    <a href="#services" onclick="closeMobileNav()">Services</a>
+    <a href="#method" onclick="closeMobileNav()">Méthode</a>
+    <a href="#whyus" onclick="closeMobileNav()">Pourquoi nous</a>
+    <a href="#contact" onclick="closeMobileNav()">Contact</a>
+</div>
+
+<!-- Main navigation -->
+<nav id="mainNav">
+    <a href="#" class="nav-logo">JAXE TECH</a>
+    <ul class="nav-links">
+        <li><a href="#hero">Accueil</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#method">Méthode</a></li>
+        <li><a href="#whyus">Pourquoi nous</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="nav-cta">Devis gratuit</a></li>
+    </ul>
+    <div class="nav-actions">
+        <button id="theme-toggle" aria-label="Changer le thème">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Hero section -->
+<section id="hero">
+    <div class="hero-noise"></div>
+    <div class="hero-content">
+        <div class="hero-eyebrow">Lomé · Togo</div>
+        <h1 class="hero-title">Agence digitale au Togo<br>Création de sites web et <em>applications performantes</em></h1>
+        <p class="hero-subtitle">JAXE TECH développe des solutions digitales sur mesure pour booster votre activité.</p>
+        <div class="hero-actions">
+            <a href="#contact" class="btn-primary"><i class="fas fa-file-invoice-dollar"></i> Demander un devis</a>
+            <a href="#contact" class="btn-ghost"><i class="fas fa-headset"></i> Nous contacter</a>
+        </div>
+    </div>
+    <div class="hero-stats">
+        <div class="hero-stat"><div><div class="hero-stat-num">+50</div><div class="hero-stat-label">Projets livrés<br>en Afrique</div></div></div>
+        <div class="hero-stat"><div><div class="hero-stat-num">100%</div><div class="hero-stat-label">Satisfaction client<br>recommandation</div></div></div>
+        <div class="hero-stat"><div><div class="hero-stat-num">24/7</div><div class="hero-stat-label">Support personnalisé<br>réactif</div></div></div>
+    </div>
+    <div class="hero-scroll">Défiler</div>
+</section>
+
+<!-- About -->
+<section id="about">
+    <div class="about-visual reveal">
+        <div class="about-img-main" style="background: linear-gradient(145deg, var(--gold-pale) 0%, var(--cream-dark) 100%); display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-laptop-code" style="font-size: 6rem; color: var(--earth); opacity: 0.8;"></i>
+        </div>
+        <div class="about-badge">
+            <span class="about-badge-num">Depuis 2020</span>
+            <span class="about-badge-label">Innovation &<br>impact digital</span>
+        </div>
+    </div>
+    <div class="about-text reveal reveal-delay-1">
+        <div class="section-eyebrow">Notre agence</div>
+        <h2 class="section-title">L'expertise digitale<br>au service de la croissance.</h2>
+        <p>Située à <strong>Lomé</strong>, JAXE TECH accompagne les entreprises togolaises et africaines dans leur transformation digitale. Nous allions expertise technique, design et stratégie marketing pour que chaque site ou application devienne un levier de croissance.</p>
+        <p>Notre mission : vous offrir des solutions robustes, évolutives et orientées conversion, avec un accompagnement personnalisé de la conception à la maintenance.</p>
+    </div>
+</section>
+
+<!-- Services -->
+<section id="services">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-eyebrow">Nos prestations</div>
+            <h2 class="section-title">Des solutions sur mesure<br>pour votre activité</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card reveal"><i class="fas fa-globe"></i><h3>Développement web</h3><p>Sites vitrine, e-commerce, refonte totale – performants et optimisés SEO.</p></div>
+            <div class="service-card reveal reveal-delay-1"><i class="fas fa-mobile-alt"></i><h3>Applications web & mobiles</h3><p>Expériences fluides, PWA, applications natives cross-platform.</p></div>
+            <div class="service-card reveal reveal-delay-2"><i class="fas fa-microchip"></i><h3>Solutions technologiques</h3><p>API sur mesure, automatisation, maintenance & hébergement.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- Method -->
+<section id="method" class="method-bg">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-eyebrow">Notre méthodologie</div>
+            <h2 class="section-title">Une approche agile<br>centrée sur vos objectifs</h2>
+        </div>
+        <div class="steps">
+            <div class="step-item reveal"><div class="step-number">1</div><strong>Analyse</strong><p>Audit & recueil des besoins précis</p></div>
+            <div class="step-item reveal reveal-delay-1"><div class="step-number">2</div><strong>Conception</strong><p>Maquettes & prototypes interactifs</p></div>
+            <div class="step-item reveal reveal-delay-2"><div class="step-number">3</div><strong>Développement</strong><p>Code clean, itérations rapides</p></div>
+            <div class="step-item reveal reveal-delay-3"><div class="step-number">4</div><strong>Tests & mise en ligne</strong><p>QA rigoureux, déploiement serein</p></div>
+            <div class="step-item reveal reveal-delay-4"><div class="step-number">5</div><strong>Suivi & optimisation</strong><p>Maintenance, SEO, amélioration continue</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- Why us -->
+<section id="whyus">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-eyebrow">Pourquoi JAXE TECH</div>
+            <h2 class="section-title">L'alliance de la technique<br>et du marketing digital</h2>
+        </div>
+        <div class="why-grid">
+            <div class="why-card reveal"><i class="fas fa-map-marker-alt"></i><h3>Basée au Togo</h3><p>Présence locale à Lomé, compréhension du marché africain.</p></div>
+            <div class="why-card reveal reveal-delay-1"><i class="fas fa-chart-line"></i><h3>Design + Marketing</h3><p>Chaque pixel sert la conversion visiteurs → clients.</p></div>
+            <div class="why-card reveal reveal-delay-2"><i class="fas fa-search"></i><h3>SEO optimisé</h3><p>Référencement local et international pour dominer les recherches.</p></div>
+            <div class="why-card reveal reveal-delay-3"><i class="fas fa-headset"></i><h3>Support personnalisé</h3><p>Accompagnement dédié et réactif.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact + form -->
+<section id="contact">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-eyebrow">Contactez-nous</div>
+            <h2 class="section-title">Parlons de votre projet<br>ensemble</h2>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-info reveal">
+                <h3><i class="fas fa-store"></i> JAXE TECH</h3>
+                <p><i class="fas fa-location-dot"></i> Avédjii, Lomé - Togo</p>
+                <p><i class="fas fa-phone-alt"></i> +228 97 99 99 43</p>
+                <p><i class="fas fa-envelope"></i> contact@jaxe-tech.com</p>
+                <div class="info-note"><i class="fas fa-clock"></i> Réponse sous 24h ouvrées</div>
+            </div>
+            <div class="contact-form reveal reveal-delay-1">
+                <form id="contactForm">
+                    <div class="form-group"><input type="text" id="name" placeholder="Nom complet *" required></div>
+                    <div class="form-group"><input type="email" id="email" placeholder="Adresse email *" required></div>
+                    <div class="form-group"><textarea id="message" rows="4" placeholder="Votre message *" required></textarea></div>
+                    <button type="submit" class="btn-primary" style="width:100%;"><i class="fas fa-paper-plane"></i> Envoyer ma demande</button>
+                    <div id="formFeedback"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <h3>JAXE TECH</h3>
+            <p>Agence digitale à Lomé – transformation digitale, innovation et performance.</p>
+            <div class="footer-social">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-col"><h4>Navigation</h4><ul><li><a href="#hero">Accueil</a></li><li><a href="#about">À propos</a></li><li><a href="#services">Services</a></li><li><a href="#contact">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Légal</h4><ul><li><a href="#">Mentions légales</a></li><li><a href="#">Confidentialité</a></li></ul></div>
+        <div class="footer-col"><h4>Horaires</h4><ul><li>Lun-Ven : 8h - 18h</li><li>Sam : sur rendez-vous</li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 JAXE TECH — Tous droits réservés.</p><p>Conçu pour la conversion & le SEO Togo</p></div>
+</footer>
+
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa fa-chevron-up"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>
