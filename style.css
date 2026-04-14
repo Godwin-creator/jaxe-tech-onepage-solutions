@@ -1,36 +1,31 @@
-/* Variables mode clair (par défaut) */
+/* Variables mode clair*/
 :root {
   --bg-primary: #F9FAFB;
   --bg-secondary: #F1F5F9;
   --bg-card: #FFFFFF;
   --bg-elevated: #FFFFFF;
 
-  /* Texte */
   --text-primary: #1E293B;
   --text-secondary: #64748B;
   --text-muted: #94A3B8;
   --text-inverse: #FFFFFF;
 
-  /* Accents & Brand */
   --accent-deep: #0B2B4A;
   --accent-cta: #F39C12;
   --accent-cta-hover: #E67E22;
   --accent-tech: #3B82F6;
 
-  /* Bordures & ombres */
   --border-light: #E2E8F0;
   --border-medium: #CBD5E1;
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 
-  /* États & feedback */
   --success-bg: #DCFCE7;
   --success-text: #166534;
   --error-bg: #FEE2E2;
   --error-text: #991B1B;
 
-  /* Layout */
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 24px;
@@ -66,7 +61,6 @@ body.dark {
   --error-text: #FECACA;
 }
 
-/* Reset & global */
 *,
 *::before,
 *::after {
@@ -99,6 +93,13 @@ h1, h2, h3, h4 {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+
+/* Selection de texte */
+::selection {
+  background-color: var(--accent-cta);
+  color: var(--text-primary);
 }
 
 /* Scrollbar */
@@ -263,6 +264,25 @@ nav.scrolled .hamburger span {
   background: var(--accent-deep);
 }
 
+.hamburger-close {
+  display: none;
+  font-size: 24px;
+  color: var(--text-inverse);
+  transition: 0.3s;
+}
+
+nav.scrolled .hamburger-close {
+  color: var(--accent-deep);
+}
+
+.hamburger.open span {
+  display: none;
+}
+
+.hamburger.open .hamburger-close {
+  display: block;
+}
+
 /* Mobile menu */
 .mobile-nav {
   display: none;
@@ -287,16 +307,6 @@ nav.scrolled .hamburger span {
 }
 .mobile-nav a:hover {
   color: var(--accent-cta);
-}
-.mobile-close {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  background: none;
-  border: none;
-  color: var(--accent-cta);
-  font-size: 1.8rem;
-  cursor: pointer;
 }
 
 /* Hero */
@@ -448,7 +458,7 @@ body.dark .hero-stats {
   50% { transform: translateX(-50%) translateY(6px); }
 }
 
-/* Sections communes */
+/* Les sections communes */
 section {
   padding: 6rem 2rem;
 }
@@ -583,7 +593,7 @@ body.dark .service-card h3 {
   border-color: var(--accent-cta);
 }
 
-/* Method (étapes) */
+/* Method */
 .method-bg {
   background: var(--bg-primary);
 }
@@ -848,7 +858,7 @@ footer {
   transform: translateY(-2px);
 }
 
-/* Reveal animation (scroll) */
+/* animation de reveal */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -863,7 +873,7 @@ footer {
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 
-/* Responsive */
+/* Responsivité */
 @media (max-width: 1024px) {
   #about {
     grid-template-columns: 1fr;
@@ -890,9 +900,12 @@ footer {
   .hamburger {
     display: flex;
   }
+  .btn-ghost{
+    margin-bottom: 25px;
+  }
   .hero-stats {
     grid-template-columns: 1fr;
-    position: relative;
+    display: flex;
   }
   .hero-stat {
     border-right: none;

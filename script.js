@@ -1,4 +1,3 @@
-// Page loader
 window.addEventListener('load', () => {
     setTimeout(() => {
         const loader = document.getElementById('page-loader');
@@ -6,7 +5,6 @@ window.addEventListener('load', () => {
     }, 1500);
 });
 
-// Nav scroll effect
 const nav = document.getElementById('mainNav');
 window.addEventListener('scroll', () => {
     if (nav) nav.classList.toggle('scrolled', window.scrollY > 60);
@@ -14,16 +12,39 @@ window.addEventListener('scroll', () => {
     if (backTop) backTop.classList.toggle('visible', window.scrollY > 400);
 });
 
-// Mobile menu
 const hamburger = document.getElementById('hamburger');
 const mobileNav = document.getElementById('mobileNav');
-const mobileClose = document.getElementById('mobileClose');
-function closeMobileNav() { mobileNav?.classList.remove('open'); }
-hamburger?.addEventListener('click', () => mobileNav?.classList.add('open'));
-mobileClose?.addEventListener('click', closeMobileNav);
-document.querySelectorAll('.mobile-nav a').forEach(link => link.addEventListener('click', closeMobileNav));
 
-// Dark mode toggle
+function toggleMobileNav() {
+    const isOpen = mobileNav?.classList.contains('open');
+    
+    if (isOpen) {
+        mobileNav?.classList.remove('open');
+        hamburger?.classList.remove('open');
+        hamburger?.setAttribute('aria-label', 'Menu');
+    } else {
+        mobileNav?.classList.add('open');
+        hamburger?.classList.add('open');
+        hamburger?.setAttribute('aria-label', 'Fermer le menu');
+    }
+}
+
+hamburger?.addEventListener('click', (e) => {
+    e.preventDefault();
+    toggleMobileNav();
+});
+
+document.querySelectorAll('.mobile-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        setTimeout(() => {
+            mobileNav?.classList.remove('open');
+            hamburger?.classList.remove('open');
+            hamburger?.setAttribute('aria-label', 'Menu');
+        }, 100);
+    });
+});
+
+// Dark mode
 const themeToggle = document.getElementById('theme-toggle');
 const currentTheme = localStorage.getItem('theme');
 if (currentTheme === 'dark') document.body.classList.add('dark');
@@ -35,13 +56,11 @@ themeToggle?.addEventListener('click', () => {
     if (icon) icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
 });
 
-// Reveal on scroll
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Smooth scroll offset (fixe header)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         const targetId = this.getAttribute('href');
@@ -52,12 +71,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             const offset = 80;
             const pos = target.getBoundingClientRect().top + window.scrollY - offset;
             window.scrollTo({ top: pos, behavior: 'smooth' });
-            closeMobileNav();
+            mobileNav?.classList.remove('open');
+            hamburger?.classList.remove('open');
+            hamburger?.setAttribute('aria-label', 'Menu');
         }
     });
 });
 
-// Contact form validation & simulation
 const form = document.getElementById('contactForm');
 const feedback = document.getElementById('formFeedback');
 form?.addEventListener('submit', (e) => {
