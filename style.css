@@ -519,12 +519,32 @@ body.dark .section-title {
   align-items: center;
   justify-content: center;
   box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
 }
+
+.about-img-main.img-container {
+  position: relative;
+  padding-bottom: 100%;
+  height: 0;
+  background: var(--cream-light);
+}
+
+.about-img-main.img-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .about-img-main i {
   font-size: 6rem;
   color: white;
   opacity: 0.8;
 }
+
 .about-badge {
   position: absolute;
   top: 2rem;
