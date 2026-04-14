@@ -1,5 +1,7 @@
 # JAXE TECH – Agence digitale (Togo)
 
+## Visiter la page : [https://godwin-creator.github.io/jaxe-tech-onepage-solutions/](https://godwin-creator.github.io/jaxe-tech-onepage-solutions/)
+
 ## Choix de design
 
 - **Palette professionnelle** : bleu profond (`#0B2B4A`) pour la confiance & la technologie ; orange doré (`#F39C12`) pour les actions (conversion) ; gris neutres pour la lisibilité.
