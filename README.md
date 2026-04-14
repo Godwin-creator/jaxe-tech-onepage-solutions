@@ -25,4 +25,4 @@
 
 ---
 
-*Site One Page – Développé pour le test JAXE TECH par [EDOH BEDI Komi Godwin](https://github.com/Godwin-creator).*
+*Site One Page – Développé pour le test JAXE TECH par [EDOH BEDI Komi Godwin](https://www.linkedin.com/in/gwin-edohbedi/).*
