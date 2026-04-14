@@ -755,8 +755,11 @@ input:focus, textarea:focus {
 
 /* Footer */
 footer {
-  background: var(--accent-deep);
-  color: var(--bg-primary);
+  background: 
+    linear-gradient(rgba(58, 67, 81, 0.7), rgba(58, 67, 81, 0.7)), 
+    url('https://images.unsplash.com/photo-1536859355448-76f92ebdc33d?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') 
+    center/cover no-repeat;
+  color: var(--accent-cta);
   padding: 4rem 2rem 2rem;
   margin-top: 2rem;
 }
